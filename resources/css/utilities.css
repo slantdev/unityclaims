@@ -1,39 +1,29 @@
 @utility container {
-    max-width: var(--wp--style--global--wide-size);
+  max-width: var(--wp--style--global--wide-size);
 }
 
 @utility alignfull {
-    width: 100vw;
-    margin: 0 calc(50% - 50vw) !important;
+  width: 100vw;
+  margin: 0 calc(50% - 50vw) !important;
 }
 
 @utility alignwide {
+  width: calc(200px + var(--wp--style--global--wide-size));
+
+  img {
     width: 100%;
-    max-width: none;
-    position: relative;
 
-    img {
-        width: calc(100% + 320px) !important;
-        max-width: none !important;
-        margin-left: -160px;
-        margin-right: -160px;
-        display: block;
-
-        @media (max-width: theme('screens.md')) {
-            margin-left: 0;
-            margin-right: 0;
-            width: 100% !important;
-        }
-    }
+    margin: 0 -100px 0 -100px !important;
+  }
 }
 
 @utility alignnone {
-    height: auto;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
+  height: auto;
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
 }
 
 @utility aligncenter {
-    margin: 0.5rem auto !important;
+  margin: 0.5rem auto !important;
 }

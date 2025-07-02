@@ -1,0 +1,91 @@
+.teamList {
+  &-container {
+    @apply container mx-auto grid grid-cols-1 gap-x-4 gap-y-12 px-4 md:grid-cols-3 md:gap-x-8 md:gap-y-12 md:px-6 lg:gap-x-16 lg:gap-y-14 xl:gap-x-36 xl:gap-y-14 xl:px-12;
+  }
+
+  .card {
+    @apply cursor-pointer;
+    &-image {
+      @apply w-full h-80 mb-5;
+      img {
+        @apply rounded-lg object-cover w-full h-full;
+      }
+    }
+    &-body {
+      @apply relative;
+      .name {
+        @apply text-2xl font-light;
+      }
+
+      .position {
+        @apply text-xl font-bold;
+      }
+
+      .icon {
+        @apply absolute right-0 top-0;
+      }
+    }
+  }
+}
+
+.modal {
+  @apply fixed inset-0 z-50 flex items-center justify-center;
+
+  &-overlay {
+    @apply absolute inset-0 bg-black/50;
+  }
+}
+
+.teamModal {
+  @apply p-4 relative z-10;
+  &-container {
+    @apply relative container w-full max-w-5xl bg-white shadow overflow-hidden
+    rounded-lg mx-auto
+    grid grid-cols-1
+    text-black
+    md:grid-cols-2;
+  }
+  &-image {
+    @apply h-full;
+
+    img {
+      @apply object-cover w-full h-full rounded-t-lg md:rounded-l-lg md:rounded-r-none;
+    }
+  }
+
+  &-body {
+    @apply p-6 md:p-8 md:pr-6 lg:p-12 lg:pr-7;
+
+    &-closeButton {
+      @apply absolute right-3 top-0 inline text-5xl font-light text-greyDarker cursor-pointer md:right-5 md:text-6xl md:top-0;
+
+      &:hover {
+        @apply text-black;
+      }
+    }
+
+    .name {
+      @apply text-3xl;
+    }
+
+    .position {
+      @apply text-xl mb-7;
+    }
+
+    .description {
+      @apply h-64 overflow-y-auto overscroll-contain pr-7;
+      &::-webkit-scrollbar {
+        height: 5px;
+        width: 8px;
+        &-thumb {
+          border-radius: 10px;
+          @apply bg-greyLight;
+        }
+        &-track {
+          border-radius: 10px;
+          background-color: #ffffff;
+        }
+      }
+    }
+  }
+}

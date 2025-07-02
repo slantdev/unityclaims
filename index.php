@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Main template file for displaying posts.
  *
@@ -56,7 +57,6 @@ get_header();
             <?php get_template_part('template-parts/content', is_singular() ? 'single' : ''); ?>
         <?php endwhile; ?>
 
-        <?php TailPress\Pagination::render(); ?>
     <?php endif; ?>
 </div>
 

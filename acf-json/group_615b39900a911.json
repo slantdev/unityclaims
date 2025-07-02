@@ -1,0 +1,74 @@
+{
+    "key": "group_615b39900a911",
+    "title": "Unused -- Element Icons",
+    "fields": [
+        {
+            "key": "field_615b39acf12d6",
+            "label": "Element Icons",
+            "name": "element_icons",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "choices": {
+                "default_panel_icon": "Panel List Icon",
+                "default_list_icon": "List Item Icon",
+                "facebook": "Facebook",
+                "instagram": "Instagram",
+                "phone": "Phone",
+                "email": "Email",
+                "plus": "Plus Icon",
+                "falling_paper_stack": "Falling Paper Stack",
+                "hand_circle": "Circle of Hands",
+                "molecule": "Molecule",
+                "person_in_hand": "Person In Hand",
+                "star_lines": "Star Lines"
+            },
+            "default_value": false,
+            "allow_null": 1,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "placeholder": "Select an icon",
+            "ajax": 0,
+            "allow_custom": 0,
+            "search_placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1751474976,
+    "acfe_categories": {
+        "unused": "Unused"
+    }
+}

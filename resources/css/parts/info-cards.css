@@ -1,0 +1,17 @@
+.infoCards {
+  &-container {
+    @apply container mx-auto grid grid-cols-2 gap-12;
+  }
+  .card {
+    @apply grid grid-cols-3 gap-12;
+    &-thumbnail {
+      @apply overflow-hidden rounded-full w-44 h-44;
+      img {
+        @apply object-cover w-full h-full mb-0;
+      }
+    }
+    &-body {
+      @apply col-span-2;
+    }
+  }
+}

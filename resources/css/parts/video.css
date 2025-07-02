@@ -1,0 +1,12 @@
+.videoBlock {
+  &-container {
+    @apply container mx-auto px-16;
+  }
+  &-video {
+    aspect-ratio: 16 / 9;
+    @apply w-full;
+    iframe {
+      @apply w-full h-full;
+    }
+  }
+}

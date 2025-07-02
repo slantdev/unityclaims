@@ -1,0 +1,43 @@
+.cards {
+  &-container {
+    @apply container mx-auto px-4 lg:px-6;
+  }
+
+  .cards {
+    @apply grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3;
+
+    .card {
+      @apply bg-white rounded-lg shadow-lg overflow-hidden transition-transform duration-200 no-underline;
+
+      &:hover {
+        @apply transform -translate-y-1 shadow-xl;
+      }
+
+      &-media {
+        @apply aspect-video overflow-hidden;
+
+        .imageWrapper {
+          @apply w-full h-full;
+
+          img {
+            @apply w-full h-full object-cover;
+          }
+        }
+      }
+
+      &-content {
+        @apply p-6;
+
+        .headingWrapper {
+          h3 {
+            @apply text-xl font-semibold mb-3;
+          }
+        }
+
+        .textWrapper {
+          @apply text-gray-600;
+        }
+      }
+    }
+  }
+}

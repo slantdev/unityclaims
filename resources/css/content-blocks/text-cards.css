@@ -1,0 +1,23 @@
+.textandcards {
+  &-container {
+    @apply container mx-auto relative px-4 lg:px-12;
+  }
+  &-text {
+    @apply mb-16;
+  }
+
+  .cards {
+    @apply grid grid-cols-1 gap-x-4 gap-y-10 md:gap-x-8 md:gap-y-12 md:grid-cols-2 lg:grid-cols-3 lg:gap-x-12 lg:gap-y-14;
+    .card {
+      .imageWrapper {
+        @apply mb-4 lg:mb-5 xl:mb-7;
+      }
+      h3 {
+        @apply text-xl mb-2 xl:mb-4;
+      }
+      .textWrapper {
+        @apply leading-normal;
+      }
+    }
+  }
+}

@@ -1,0 +1,72 @@
+.imageButtonCardsCarousel {
+  &-container {
+    @apply container mx-auto grid grid-cols-1 gap-y-6 lg:gap-6 lg:grid-cols-5 xl:grid-cols-4;
+  }
+
+  &-text {
+    @apply px-4 lg:px-6 lg:col-span-2 xl:col-span-1;
+    h2 {
+      @apply text-4xl uppercase font-normal mb-4 lg:mb-8;
+    }
+  }
+
+  &-controls {
+    @apply flex gap-1;
+    button {
+      @apply bg-black h-10 w-10 grid place-items-center;
+      &:hover {
+        @apply bg-greyDarkest;
+      }
+    }
+  }
+  &-carousel {
+    @apply col-span-3 snap-x overflow-x-scroll pb-8 scroll-smooth lg:pb-14;
+    &::-webkit-scrollbar {
+      height: 8px;
+      width: 8px;
+      &-thumb {
+        border-radius: 10px;
+        @apply bg-unityGold;
+      }
+      &-track {
+        border-radius: 10px;
+        @apply bg-greyDarker;
+      }
+    }
+    .cards {
+      @apply grid auto-cols-auto grid-flow-col gap-4 pl-4 lg:pl-0 lg:gap-6;
+      .card {
+        min-width: 279px;
+        min-height: 279px;
+        @apply bg-greyBase snap-center rounded-lg relative overflow-hidden;
+        .headingWrapper {
+          @apply absolute top-44 px-8;
+          h3 {
+            @apply text-2xl text-white font-medium;
+          }
+        }
+        .buttonImage {
+          @apply absolute inset-0;
+          img {
+            @apply h-full w-full object-cover;
+          }
+          &::after {
+            content: "";
+            @apply absolute block inset-0 bg-black opacity-40 transition duration-200;
+          }
+        }
+        .arrowIcon {
+          @apply absolute top-4 right-4 w-6;
+        }
+
+        &:hover {
+          .buttonImage {
+            &::after {
+              @apply opacity-20;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+.textarea--coverletter {
+  @apply col-span-2;
+}
+
+.file--resume {
+  @apply col-span-2;
+  .input-file {
+    @apply grid grid-cols-2 gap-6;
+  }
+}

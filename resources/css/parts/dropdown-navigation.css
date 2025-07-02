@@ -1,0 +1,133 @@
+/* .serviceNavigation {
+  @apply bg-greyDarker;
+  &-container {
+    @apply container mx-auto pt-12 pb-12 px-4 text-xl font-medium gap-4 flex flex-col justify-center md:flex-row md:pt-16 md:px-0 md:pb-16 md:text-2xl;
+    .dropdown {
+      min-width: 280px;
+      min-height: 50px;
+      @apply text-xl px-6 rounded-full text-greyDarker w-full border-none shadow-inner m-0 bg-white grid items-center font-light cursor-pointer;
+      &:focus {
+        @apply outline outline-unityGold;
+      }
+      &:hover {
+        @apply outline outline-unityGold;
+      }
+      &-menu {
+        max-width: 280px;
+        @apply absolute w-full z-50 shadow mt-1;
+        animation-name: "pop-in";
+        animation-duration: 0.3s;
+        animation-timing-function: cubic-bezier(0.45, 0.09, 0.23, 1.31);
+        &-item {
+          @apply bg-gray-100 px-6 py-2 font-light w-full text-xl;
+          &:not(:last-child) {
+            @apply border-b border-greyBase;
+          }
+          &:hover {
+            @apply bg-black text-white cursor-pointer;
+          }
+        }
+      }
+    }
+  }
+  &-submit {
+    min-height: 50px;
+    line-height: 50px;
+    @apply bg-black text-white px-6 rounded-full transition-colors duration-200 no-underline;
+    &:hover {
+      @apply bg-unityGold text-black;
+    }
+  }
+} */
+
+.serviceNavigation {
+  @apply bg-greyDarker;
+
+  &-container {
+    @apply container mx-auto pt-12 pb-12 px-4 text-xl font-medium gap-4 flex flex-col justify-center items-center md:flex-row md:pt-16 md:px-0 md:pb-16 md:text-2xl;
+
+    label {
+      @apply text-white mr-4;
+    }
+  }
+
+  .dropdown-wrapper {
+    @apply relative;
+    min-width: 280px;
+  }
+
+  .dropdown {
+    min-width: 280px;
+    min-height: 50px;
+    @apply text-xl px-6 rounded-full text-greyDarker w-full border-none shadow-inner m-0 bg-white grid items-center font-light cursor-pointer;
+
+    &:focus {
+      @apply outline outline-unityGold;
+    }
+
+    &:hover {
+      @apply outline outline-unityGold;
+    }
+
+    &[aria-expanded="true"] {
+      @apply outline outline-unityGold;
+    }
+
+    &-item {
+      @apply text-left;
+    }
+
+    &-menu {
+      max-width: 280px;
+      @apply absolute w-full z-50 shadow mt-1;
+      animation-name: pop-in;
+      animation-duration: 0.3s;
+      animation-timing-function: cubic-bezier(0.45, 0.09, 0.23, 1.31);
+
+      &-item {
+        @apply bg-gray-100 px-6 py-2 font-light w-full text-xl text-left;
+
+        &:not(:last-child) {
+          @apply border-b border-greyBase;
+        }
+
+        &:hover {
+          @apply bg-black text-white cursor-pointer;
+        }
+
+        &:first-child {
+          @apply rounded-t;
+        }
+
+        &:last-child {
+          @apply rounded-b;
+        }
+
+        &.focused {
+          @apply bg-black text-white;
+        }
+      }
+    }
+  }
+
+  &-submit {
+    min-height: 50px;
+    line-height: 50px;
+    @apply bg-black text-white px-6 rounded-full transition-colors duration-200 no-underline;
+
+    &:hover:not(.opacity-50) {
+      @apply bg-unityGold text-black;
+    }
+  }
+}
+
+@keyframes pop-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.95) translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}

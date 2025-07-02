@@ -1,0 +1,60 @@
+.headerMenu {
+  @apply grid grid-flow-col auto-cols-max md:gap-12 md:mr-7;
+  > nav {
+    > ul {
+      @apply list-none flex gap-12 mb-0 h-full;
+      > li {
+        @apply grid place-items-center ml-4 pl-2;
+        > a {
+          @apply relative w-full h-full grid place-items-center no-underline;
+          &:hover {
+            &:before {
+              content: "";
+              @apply h-2 w-full bg-white absolute top-0;
+            }
+          }
+        }
+      }
+    }
+  }
+  .headerUtilities {
+    ul {
+      @apply list-none flex gap-12 mb-0 h-full;
+      li {
+        @apply relative grid place-items-center;
+      }
+    }
+  }
+}
+.mainNavigation {
+  @apply hidden xl:block;
+}
+.mobileNav {
+  @apply flex items-center px-2 xl:hidden;
+  .mobileNavButton {
+    @apply p-2;
+  }
+}
+.mobileNavMenu {
+  @apply fixed flex justify-end top-0 right-0 bottom-0 z-50 bg-black/25 translate-x-full transition duration-300 ease-in-out;
+  &.showMenu {
+    @apply translate-x-0;
+  }
+  .inner {
+    background-color: rgb(219, 219, 219);
+    @apply pt-12 px-6 pb-6 flex flex-col h-full;
+    min-width: 260px;
+  }
+  .mobileCloseButton {
+    @apply absolute top-4 right-4 hover:opacity-50 transition-opacity;
+  }
+  .mobileNavMenuList {
+    @apply list-none;
+    li {
+      @apply m-0 py-2 px-0;
+      a {
+        @apply text-black no-underline hover:underline;
+      }
+    }
+  }
+}

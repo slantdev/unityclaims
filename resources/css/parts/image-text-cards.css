@@ -1,0 +1,26 @@
+.imageAndTextCards {
+  &-container {
+    @apply mx-auto container px-4 lg:px-0;
+  }
+  .cards {
+    @apply grid grid-cols-1 gap-4 md:grid-cols-3 md:gap-16;
+    .card {
+      @apply bg-white rounded-lg shadow-lg;
+      &-thumbnail {
+        @apply max-h-52 overflow-hidden rounded-lg;
+      }
+      &-body {
+        @apply py-10 px-6;
+      }
+      &-footer {
+        @apply px-6 pb-8 grid auto-cols-auto grid-flow-col justify-between;
+        &-date {
+          @apply text-greyDarker;
+        }
+      }
+    }
+    .errorMessage {
+      @apply col-span-3;
+    }
+  }
+}

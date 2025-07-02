@@ -1,0 +1,78 @@
+/* heading styles */
+
+h1 {
+  @apply text-6xl font-light mb-8;
+}
+
+h2 {
+  @apply text-[2.5rem] font-bold mb-8;
+}
+
+h3 {
+  @apply text-3xl font-bold mb-6;
+}
+
+h4 {
+  @apply text-[1.625rem] font-normal mb-4;
+}
+
+h5 {
+  @apply text-xl font-medium mb-4;
+}
+
+h6 {
+  @apply text-xl font-light mb-2;
+}
+
+.largeText {
+  @apply text-3xl font-light mb-4;
+}
+
+/* text styles */
+.shortUnderline {
+  @apply pb-6 xl:pb-8;
+  &::after {
+    content: "";
+    @apply block absolute left-0 mt-6 bg-greyDarkest w-[64px] h-px xl:w-[85px] xl:mt-8;
+  }
+}
+.centerUnderline {
+  @apply pb-8 text-center;
+  &::after {
+    content: "";
+    height: 1px;
+    @apply block absolute w-20 left-1/2 -ml-10 mt-8 bg-greyDarkest;
+  }
+}
+
+p {
+  @apply mb-6;
+}
+
+a {
+  @apply underline;
+}
+
+strong {
+  @apply font-bold;
+}
+
+em {
+  @apply italic;
+}
+
+.smallText {
+  @apply text-sm;
+}
+
+blockquote {
+  @apply text-lg mb-6;
+}
+
+.wysiwygText p {
+  @apply mb-8;
+}
+
+.errorMessage {
+  @apply text-center text-xl;
+}

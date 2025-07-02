@@ -1,0 +1,38 @@
+/* form styles */
+input,
+textarea {
+  @apply block w-full
+    border-2 border-black
+    mb-2
+    py-2 px-6
+    placeholder-black text-black;
+}
+
+label {
+  @apply flex items-center;
+  input[type="radio"] {
+    @apply mr-2;
+  }
+}
+
+select {
+  @apply block w-full
+    border-2 border-black
+    mb-2
+    py-2 px-6;
+}
+
+input[type="file"] {
+  visibility: hidden;
+  position: relative;
+
+  &::after {
+    content: "Click to upload a document";
+    @apply inset-0 visible absolute shadow-inner rounded-lg py-2 px-6 cursor-pointer leading-normal transition duration-200;
+  }
+  &:hover {
+    &::after {
+      @apply bg-unityGold;
+    }
+  }
+}

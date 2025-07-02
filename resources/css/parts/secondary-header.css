@@ -1,0 +1,10 @@
+.secondaryHeader {
+  @apply w-full h-8 grid justify-end content-center;
+  background-color: var(--color-unityGold);
+  ul {
+    @apply list-none flex gap-6 mb-0 mt-2 mr-7 ml-0;
+    li {
+      @apply h-8 ml-0 pl-0 mb-0;
+    }
+  }
+}

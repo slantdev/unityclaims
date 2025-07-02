@@ -1,0 +1,32 @@
+.CTA03 {
+  &-container {
+    @apply container mx-auto relative flex justify-end;
+  }
+  &-image {
+    @apply absolute z-10 w-full h-full top-0 left-0 pt-12 pr-16;
+    .imageWrapper {
+      @apply w-full h-full;
+      img {
+        @apply object-cover w-full h-full rounded-lg;
+      }
+    }
+  }
+  &-body {
+    @apply relative z-30 bg-greyLightest p-14 rounded-lg shadow w-1/2 mb-28;
+    .btn {
+      @apply text-black mb-6 uppercase;
+    }
+    .metrics {
+      @apply grid grid-cols-3 pt-6 gap-x-16 gap-y-7;
+      .card {
+        @apply grid auto-cols-max items-center gap-x-4 gap-y-1.5;
+        .value {
+          @apply text-4xl;
+        }
+        .title {
+          @apply col-start-2;
+        }
+      }
+    }
+  }
+}

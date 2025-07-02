@@ -1,0 +1,89 @@
+{
+    "key": "group_615a7ed48f340",
+    "title": "Unused -- Element Heading",
+    "fields": [
+        {
+            "key": "field_615a7edcdc9e6",
+            "label": "Heading Text",
+            "name": "headingText",
+            "aria-label": "",
+            "type": "text",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_615a7ee6dc9e7",
+            "label": "Heading Level",
+            "name": "headingLevel",
+            "aria-label": "",
+            "type": "select",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "show_in_graphql": 1,
+            "choices": {
+                "1:Heading 1": "1:Heading 1",
+                "2:Heading 2": "2:Heading 2",
+                "3:Heading 3": "3:Heading 3",
+                "4:Heading 4": "4:Heading 4",
+                "5:Heading 5": "5:Heading 5",
+                "6:Heading 6": "6:Heading 6"
+            },
+            "default_value": "2:Heading 2",
+            "allow_null": 0,
+            "multiple": 0,
+            "ui": 0,
+            "return_format": "value",
+            "ajax": 0,
+            "placeholder": "",
+            "allow_custom": 0,
+            "search_placeholder": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": false,
+    "description": "",
+    "show_in_rest": 0,
+    "acfe_display_title": "",
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1751474971,
+    "acfe_categories": {
+        "unused": "Unused"
+    }
+}

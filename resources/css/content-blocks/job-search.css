@@ -1,0 +1,35 @@
+.jobListing {
+  &-container {
+    @apply container mx-auto grid grid-cols-3 gap-12 px-24;
+  }
+  &-header {
+    .textWrapper {
+      @apply text-lg text-greyDarker;
+    }
+  }
+  &-search {
+    @apply col-span-2 grid items-end grid-cols-3 gap-6;
+    select,
+    input {
+      @apply border-none shadow-inner rounded h-12;
+      &::placeholder {
+        @apply text-greyDarker;
+      }
+    }
+    select {
+      @apply text-greyDarker;
+    }
+    input[type="search"] {
+      @apply col-span-2;
+    }
+  }
+  &-list {
+    @apply flex flex-col col-span-3 gap-6;
+    .job {
+      @apply bg-white rounded px-8 py-5 shadow flex justify-between items-center cursor-pointer transition duration-200 no-underline;
+      &:hover {
+        @apply bg-black text-unityGold;
+      }
+    }
+  }
+}

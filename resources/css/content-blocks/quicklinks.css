@@ -1,0 +1,34 @@
+.quicklinks {
+  &-container {
+    @apply container mx-auto
+    md:grid md:auto-cols-fr md:grid-flow-col md:gap-0.5;
+  }
+
+  &-button {
+    @apply flex items-center justify-center relative text-white text-2xl min-h-[12rem] md:min-h-[24rem];
+    a {
+      @apply flex justify-center items-center no-underline h-full;
+    }
+
+    &-text {
+      @apply relative z-30 h-full w-full text-center grid place-content-center;
+    }
+
+    &-image {
+      @apply absolute inset-0 border-none overflow-hidden z-10;
+
+      img {
+        @apply h-full w-full object-cover;
+      }
+      &::after {
+        content: "";
+        @apply absolute inset-0 bg-black/40 z-20;
+      }
+      &:hover {
+        .quicklinks-button-image::after {
+          @apply bg-black/60;
+        }
+      }
+    }
+  }
+}

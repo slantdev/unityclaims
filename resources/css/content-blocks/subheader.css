@@ -1,0 +1,29 @@
+.subheader {
+  @apply -mt-24 relative lg:-mt-24;
+  &-container {
+    @apply bg-unityGold text-black container py-8 px-4 mx-auto grid grid-cols-1 gap-8 md:px-6 md:gap-12 md:grid-cols-2 lg:p-12 lg:gap-16;
+  }
+
+  &-header {
+    .headingWrapper {
+      @apply border-b-2 border-greyDarker mb-6 lg:mb-6;
+      h2 {
+        @apply mb-0 pb-3;
+      }
+    }
+    .breadcrumbs {
+      a {
+        @apply no-underline;
+        &:hover {
+          @apply text-white;
+        }
+      }
+    }
+  }
+
+  &-body {
+    .leadingText {
+      @apply text-2xl font-medium mb-6;
+    }
+  }
+}

@@ -1,0 +1,6 @@
+.logoContainer {
+  @apply pt-6 px-4 xl:pt-7;
+  .logoImage {
+    @apply max-h-16 md:max-h-20 xl:max-h-fit;
+  }
+}

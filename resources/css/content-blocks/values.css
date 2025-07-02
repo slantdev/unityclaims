@@ -1,0 +1,35 @@
+.values {
+  &-container {
+    @apply container mx-auto;
+  }
+  &-header {
+    .leadingText {
+      @apply text-4xlPlus font-light mb-8;
+    }
+  }
+  &-content {
+    @apply grid grid-cols-1 gap-12 lg:grid-cols-3 lg:gap-28;
+    &-header {
+      .headingWrapper {
+        @apply text-unityGold;
+      }
+      .subTitle {
+        @apply text-lg;
+      }
+    }
+    &-body {
+      @apply col-span-1 grid grid-cols-1 gap-8 md:grid-cols-2 md:gap-x-16 md:gap-y-12 lg:col-span-2;
+      .card {
+        .imageWrapper {
+          @apply mb-7;
+        }
+        .headingWrapper h3 {
+          @apply text-lg;
+        }
+        .bodyText {
+          @apply text-base;
+        }
+      }
+    }
+  }
+}

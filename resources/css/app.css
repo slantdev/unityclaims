@@ -1,17 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+@import "tailwindcss";
+@import "./theme.css";
+@import "./base.css";
+@import "./utilities.css";
+@import "./custom.css";
 
-@import url(https://fonts.bunny.net/css?family=raleway:400);
-@import 'tailwindcss';
-@import './theme.css';
-@import './utilities.css';
-@import './custom.css' layer(utilities);
-
-@source '../../vendor/tailpress/framework/**/*.php';
-@source '../../vendor/tailpress/framework/**/**/*.php';
-
-@utility container {
-    margin-inline: auto;
-    padding-inline: 2rem;
-}
+/* @import './custom.css' layer(utilities); */
 
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
@@ -27,6 +21,6 @@
   ::before,
   ::backdrop,
   ::file-selector-button {
-    border-color: var(--color-zinc-200, currentColor);
+    border-color: var(--color-gray-200, currentColor);
   }
 }

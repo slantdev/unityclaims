@@ -1,0 +1,14 @@
+.header {
+  @apply relative bg-cover bg-center pb-72 text-white lg:pt-6 lg:pb-80;
+  &:before {
+    content: "";
+    @apply absolute bg-black inset-0 opacity-40;
+  }
+  &-container {
+    @apply container mx-auto relative z-50;
+  }
+
+  &-main {
+    @apply relative flex justify-between mx-auto;
+  }
+}

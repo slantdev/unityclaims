@@ -1,0 +1,49 @@
+.CTA02 {
+  background: rgb(254, 172, 45);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#feac2d",endColorstr="#ffffff",GradientType=1);
+
+  @media (min-width: 1024px) {
+    background: -moz-linear-gradient(
+      90deg,
+      rgba(254, 172, 45, 1) 0%,
+      rgba(254, 172, 45, 1) 60%,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    background: -webkit-linear-gradient(
+      90deg,
+      rgba(254, 172, 45, 1) 0%,
+      rgba(254, 172, 45, 1) 60%,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    background: linear-gradient(
+      90deg,
+      rgba(254, 172, 45, 1) 0%,
+      rgba(254, 172, 45, 1) 60%,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(255, 255, 255, 1) 100%
+    );
+  }
+
+  &-container {
+    @apply container mx-auto grid grid-cols-1 gap-12 items-center px-4 lg:grid-cols-2 lg:gap-12;
+  }
+
+  &-body {
+    @apply text-white;
+
+    .quote {
+      @apply border-l-2 border-white pl-6 text-2xl font-light mb-8 md:mb-12 md:pl-12 md:text-3xl;
+    }
+    .quoteSource {
+      @apply pl-6 md:pl-12;
+      .name {
+        @apply text-2xl font-bold;
+      }
+      .position {
+        @apply text-lg;
+      }
+    }
+  }
+}

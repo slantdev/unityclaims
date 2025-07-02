@@ -1,16 +1,18 @@
 @theme {
-    --breakpoint-xs: 480px;
+  --wp--style--global--wide-size: 1536px;
+  /* --breakpoint-xs: 480px;
     --breakpoint-sm: 600px;
     --breakpoint-md: 782px;
     --breakpoint-lg: 960px;
     --breakpoint-xl: 1280px;
-    --breakpoint-2xl: 1440px;
+    --breakpoint-2xl: 1440px; */
 
-    --color-primary: var(--wp--preset--color--primary);
+  /* --color-primary: var(--wp--preset--color--primary);
     --color-secondary: var(--wp--preset--color--secondary);
     --color-dark: var(--wp--preset--color--dark);
-    --color-light: var(--wp--preset--color--light);
+    --color-light: var(--wp--preset--color--light); */
 
+  /* 
     --text-xs: var(--wp--preset--font-size--xs, 0.75rem);
     --text-sm: var(--wp--preset--font-size--sm, 0.875rem);
     --text-base: var(--wp--preset--font-size--base, 1rem);
@@ -23,5 +25,24 @@
     --text-6xl: var(--wp--preset--font-size--6-xl, 3.75rem);
     --text-7xl: var(--wp--preset--font-size--7-xl, 4.5rem);
     --text-8xl: var(--wp--preset--font-size--8-xl, 6rem);
-    --text-9xl: var(--wp--preset--font-size--9-xl, 8rem);
+    --text-9xl: var(--wp--preset--font-size--9-xl, 8rem); */
+
+  --default-font-family: "Roboto", "Helvetica", "Arial", "sans-serif";
+  --font-sans: "Roboto", "Helvetica", "Arial", "sans-serif";
+
+  --color-unityGold: #feac2d;
+  --color-unityBlack: #000000;
+  --color-unityYellow: #ffea3d;
+  --color-unityBrown: #d8bd8d;
+  --color-greyDarkest: #363636;
+  --color-greyDarker: #928f85;
+  --color-greyDark: #d7d7cf;
+  --color-greyBase: #e2e2e2;
+  --color-greyLight: #ebeded;
+  --color-greyLightest: #f2f2f2;
+  --color-unityGoldDark: #e49a2f;
+  --color-modalBG: rgba(255, 255, 255, 0.8);
+
+  --text-4xlPlus: "2.5rem";
+  --text-2xlPlus: "1.625rem";
 }

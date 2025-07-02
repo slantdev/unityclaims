@@ -1,0 +1,30 @@
+.headingWrapper {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply mb-8;
+
+    &.centerUnderline {
+      @apply text-center relative pb-4;
+
+      &:after {
+        content: "";
+        @apply absolute bottom-0 left-1/2 transform -translate-x-1/2;
+        @apply w-20 h-1 bg-unityGold;
+      }
+    }
+
+    &.shortUnderline {
+      @apply relative pb-4;
+
+      &:after {
+        content: "";
+        @apply absolute bottom-0 left-0;
+        @apply w-20 h-1 bg-unityGold;
+      }
+    }
+  }
+}

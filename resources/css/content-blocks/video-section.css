@@ -1,0 +1,13 @@
+.videoBlock {
+  &-container {
+    @apply container mx-auto px-16;
+  }
+  &-video {
+    @apply relative w-full;
+    padding-bottom: 56.25%;
+
+    iframe {
+      @apply absolute top-0 left-0 w-full h-full;
+    }
+  }
+}

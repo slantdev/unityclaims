@@ -1,37 +1,41 @@
 <?php
 
-if (is_file(__DIR__.'/vendor/autoload_packages.php')) {
-    require_once __DIR__.'/vendor/autoload_packages.php';
-}
-
-function tailpress(): TailPress\Framework\Theme
+/**
+ * Theme setup.
+ */
+function theme_setup()
 {
-    return TailPress\Framework\Theme::instance()
-        ->assets(fn($manager) => $manager
-            ->withCompiler(new TailPress\Framework\Assets\ViteCompiler, fn($compiler) => $compiler
-                ->registerAsset('resources/css/app.css')
-                ->registerAsset('resources/js/app.js')
-                ->editorStyleFile('resources/css/editor-style.css')
-            )
-            ->enqueueAssets()
-        )
-        ->features(fn($manager) => $manager->add(TailPress\Framework\Features\MenuOptions::class))
-        ->menus(fn($manager) => $manager->add('primary', __( 'Primary Menu', 'tailpress')))
-        ->themeSupport(fn($manager) => $manager->add([
-            'title-tag',
-            'custom-logo',
-            'post-thumbnails',
-            'align-wide',
-            'wp-block-styles',
-            'responsive-embeds',
-            'html5' => [
-                'search-form',
-                'comment-form',
-                'comment-list',
-                'gallery',
-                'caption',
-            ]
-        ]));
+  add_theme_support('title-tag');
+
+  add_theme_support(
+    'html5',
+    array(
+      'search-form',
+      //'comment-form',
+      //'comment-list',
+      'gallery',
+      'caption',
+    )
+  );
+
+  // add_theme_support('custom-logo');
+  add_theme_support('post-thumbnails');
+
+  // add_theme_support('align-wide');
+  // add_theme_support('wp-block-styles');
+
+  add_theme_support('responsive-embeds');
+
+  add_theme_support('editor-styles');
+  add_editor_style('css/editor-style.css');
 }
 
-tailpress();
+add_action('after_setup_theme', 'theme_setup');
+
+/**
+ * Required Functions.
+ */
+require get_template_directory() . '/inc/acf-functions.php';
+require get_template_directory() . '/inc/custom-post-types.php';
+require get_template_directory() . '/inc/enqueue.php';
+require get_template_directory() . '/inc/template-functions.php';

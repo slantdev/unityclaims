@@ -1,0 +1,52 @@
+.imageButtonCards {
+  &-container {
+    @apply container mx-auto grid px-4 lg:px-6 xl:gap-6;
+  }
+
+  &-text {
+    h2 {
+      @apply text-4xl uppercase font-normal;
+    }
+  }
+
+  &-cards {
+    @apply -mx-2 xl:-mx-0;
+    .cards {
+      @apply grid grid-cols-2 gap-2 xl:grid-cols-5 xl:gap-6;
+
+      .card {
+        @apply min-h-[180px] md:min-h-[222px];
+        @apply bg-greyBase snap-center rounded-lg relative overflow-hidden;
+
+        .backgroundImage {
+          @apply absolute inset-0 w-full h-full;
+          &::after {
+            content: "";
+            @apply absolute block inset-0 bg-black opacity-40 transition duration-200;
+          }
+          img {
+            @apply h-full w-full object-cover;
+          }
+        }
+
+        .headingWrapper {
+          @apply absolute bottom-3 px-3 xl:px-6;
+          h3 {
+            @apply text-xl mb-0 leading-tight text-white font-normal xl:text-2xl;
+          }
+        }
+        .arrowIcon {
+          @apply absolute top-4 right-4 w-6;
+        }
+
+        &:hover {
+          .backgroundImage {
+            &::after {
+              @apply opacity-20;
+            }
+          }
+        }
+      }
+    }
+  }
+}

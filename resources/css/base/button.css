@@ -1,0 +1,29 @@
+/* button styles */
+button {
+  @apply text-left;
+}
+
+.btn {
+  @apply inline-block max-w-lg
+  rounded border-2
+  py-2 px-6
+  no-underline cursor-pointer;
+
+  &-pill {
+    @apply rounded-full font-normal;
+  }
+
+  &-primary {
+    @apply border-unityGold bg-unityGold text-white;
+    &:hover {
+      @apply border-unityGoldDark bg-unityGoldDark text-white;
+    }
+  }
+
+  &-secondary {
+    @apply border-unityGold bg-transparent text-unityGold;
+    &:hover {
+      @apply bg-unityGold text-black;
+    }
+  }
+}

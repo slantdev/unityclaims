@@ -1,0 +1,18 @@
+.fullWidthText {
+  &-container {
+    @apply container mx-auto px-12 relative;
+  }
+
+  &-body {
+    @apply grid gap-16;
+    .leadingText {
+      @apply text-2xl font-light mb-6;
+    }
+    .bodyText {
+      @apply mb-6;
+    }
+    .imageWrapper {
+      @apply mb-6;
+    }
+  }
+}

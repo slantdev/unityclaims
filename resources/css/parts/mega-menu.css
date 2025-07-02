@@ -1,0 +1,86 @@
+.megaMenu {
+  @apply absolute z-50 w-full pt-6;
+  &:focus {
+    @apply outline-none;
+  }
+  animation-name: "pop-in";
+  animation-duration: 0.3s;
+  animation-timing-function: cubic-bezier(0.45, 0.09, 0.23, 1.31);
+  &.fadeOutAnimation {
+    animation-name: "pop-out";
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.45, 0.09, 0.23, 1.31);
+  }
+  &-container {
+    @apply container mx-auto px-20 grid grid-cols-3 bg-greyBase text-black;
+  }
+  &-summary,
+  &-menu {
+    @apply py-16;
+  }
+
+  &-summary {
+    @apply pr-6;
+    h2 {
+      @apply text-unityGold uppercase text-[2.5rem];
+    }
+    .textWrapper {
+      @apply mb-6;
+    }
+  }
+  &-menu {
+    @apply pl-6;
+    ul {
+      @apply list-none flex flex-col w-full;
+      li {
+        &:not(:last-child) {
+          @apply border-b-2 border-greyDark;
+        }
+        a {
+          @apply no-underline px-4 py-2 font-medium grid grid-flow-col items-center justify-between;
+          &:hover {
+            @apply bg-unityGold text-black;
+          }
+        }
+      }
+    }
+  }
+
+  &-image {
+    .imageWrapper {
+      @apply w-full h-full relative;
+      img {
+        @apply w-full h-full object-cover;
+      }
+      &::after {
+        content: "";
+        @apply block absolute inset-0 bg-unityGold mix-blend-multiply;
+      }
+    }
+  }
+}
+
+/* Megamenu CSS with better hover handling */
+.mainNavigation {
+  .menu-item-has-megamenu {
+    @apply static;
+    .megaMenu {
+      @apply absolute top-full left-0 z-[1000];
+      @apply opacity-0 invisible pointer-events-none;
+      @apply transition-all ease-out origin-top -translate-y-5 duration-200;
+    }
+    /* Show megamenu on hover with a pseudo-element bridge */
+    &:hover .megaMenu,
+    .megaMenu:hover {
+      @apply opacity-100 visible pointer-events-auto -translate-y-0 duration-500 delay-200;
+    }
+    /* Create invisible bridge to prevent gap issues */
+    &::after {
+      content: "";
+      @apply absolute top-full left-0 right-0 h-4 hidden;
+    }
+    &:hover::after {
+      @apply block;
+    }
+  }
+}

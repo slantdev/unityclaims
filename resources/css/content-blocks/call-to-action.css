@@ -1,0 +1,11 @@
+.mainCTA {
+  &-content {
+    @apply container mx-auto px-12;
+    .headingWrapper {
+      @apply w-8/12;
+    }
+    .textWrapper {
+      @apply w-5/12;
+    }
+  }
+}

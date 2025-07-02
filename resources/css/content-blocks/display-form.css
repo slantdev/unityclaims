@@ -1,0 +1,27 @@
+.displayForm {
+  &-container {
+    @apply container mx-auto;
+    form {
+      @apply mx-auto max-w-3xl p-12 bg-white rounded-lg shadow grid grid-cols-2 gap-x-6 gap-y-8;
+
+      label {
+        @apply mb-4;
+      }
+
+      input,
+      textarea,
+      select {
+        @apply shadow-inner border-none;
+        &::placeholder {
+          @apply text-greyBase font-light;
+        }
+      }
+      .textarea--comment {
+        @apply col-span-2;
+      }
+    }
+    .disclaimer {
+      @apply col-span-2 font-bold;
+    }
+  }
+}

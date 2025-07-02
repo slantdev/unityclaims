@@ -1,0 +1,51 @@
+.paddingTop {
+  &-none {
+    @apply pt-0;
+  }
+  &-small {
+    @apply pt-6 xl:pt-12;
+  }
+  &-medium {
+    @apply pt-12 xl:pt-20;
+  }
+  &-large {
+    @apply pt-20 xl:pt-32;
+  }
+  &-extraLarge {
+    @apply pb-32 xl:pt-48;
+  }
+}
+
+.paddingBottom {
+  &-none {
+    @apply pb-0;
+  }
+  &-small {
+    @apply pb-6 xl:pb-12;
+  }
+  &-medium {
+    @apply pb-12 xl:pb-20;
+  }
+  &-large {
+    @apply pb-20 xl:pb-32;
+  }
+  &-extraLarge {
+    @apply pb-32 xl:pb-48;
+  }
+}
+
+.whiteTheme {
+  @apply bg-white;
+}
+
+.lightGreyTheme {
+  @apply bg-greyLight;
+}
+
+.greyTheme {
+  @apply bg-greyBase;
+}
+
+.darkGreyTheme {
+  @apply bg-greyDarkest text-white;
+}

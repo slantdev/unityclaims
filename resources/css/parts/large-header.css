@@ -1,0 +1,80 @@
+.largeHeader {
+  @apply relative bg-cover bg-center pt-0 text-white xl:pt-6;
+  @apply bg-greyDarker;
+
+  &-container {
+    @apply container mx-auto min-h-[100vh] md:min-h-[800px];
+  }
+
+  .secondaryHeader {
+    @apply relative z-50;
+  }
+
+  &-header {
+    @apply relative flex justify-between mx-auto z-50;
+  }
+
+  .megaMenu {
+    @apply left-0;
+  }
+
+  &-slider {
+    @apply w-full h-full;
+    &-wrapper {
+      @apply absolute top-0 right-0 left-0 grid place-items-center overflow-hidden min-h-[100vh] md:min-h-[800px];
+    }
+    .splide {
+      &__track {
+        @apply h-full;
+      }
+      &__slide {
+        @apply flex items-center p-0;
+        &__content {
+          @apply relative w-full h-full flex place-items-center;
+          &__container {
+            @apply container mx-auto px-4 pb-20 md:pt-20 xl:px-16 2xl:px-20;
+          }
+        }
+        .imageWrapper {
+          @apply w-full h-full absolute;
+          &:before {
+            content: "";
+            @apply absolute bg-black inset-0 opacity-50;
+          }
+          img {
+            @apply w-full h-full object-cover;
+          }
+        }
+      }
+      &__arrow {
+        background: transparent;
+        @apply bottom-56 top-auto translate-y-0 md:bottom-48 xl:top-1/2 xl:bottom-auto xl:translate-y-[-50%];
+        svg {
+          @apply fill-white w-6 h-6 xl:w-12 xl:h-12;
+        }
+        &--prev {
+          @apply left-auto right-12 xl:right-auto xl:left-4;
+        }
+      }
+    }
+    h2 {
+      @apply text-[2.25rem] leading-none font-light mb-4 max-w-xl md:text-[3.25rem] xl:text-6xl xl:mb-8 xl:max-w-2xl;
+    }
+    .textWrapper {
+      @apply max-w-xl text-xl md:text-2xl xl:max-w-2xl;
+    }
+  }
+
+  &-footer {
+    @apply relative grid grid-cols-2 md:grid-cols-4 md:auto-cols-fr gap-0.5 container mx-auto -mt-48 md:-mt-40;
+    a {
+      @apply bg-unityGold text-unityBlack py-10 px-4 grid place-items-center uppercase transition-colors duration-200 no-underline md:py-12;
+      &:hover {
+        @apply bg-greyBase;
+      }
+      img {
+        @apply mb-4 md:mb-8;
+      }
+    }
+  }
+}

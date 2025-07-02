@@ -1,0 +1,43 @@
+.post {
+  &-container {
+    @apply container mx-auto grid grid-cols-1 py-12 gap-10 px-4 md:grid-cols-3 md:py-24 md:px-14;
+  }
+  &-content {
+    @apply col-span-1 md:col-span-2;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      @apply mb-4;
+    }
+
+    p {
+      @apply mb-6;
+    }
+
+    ul,
+    ol {
+      @apply mb-6 ml-6;
+    }
+
+    img {
+      @apply max-w-full h-auto my-6;
+    }
+
+    blockquote {
+      @apply border-l-4 border-unityGold pl-6 my-6 italic;
+    }
+  }
+  &-side {
+    @apply order-first md:order-last;
+    .imageWrapper {
+      @apply mb-8 md:mb-0;
+      img {
+        @apply rounded w-full;
+      }
+    }
+  }
+}

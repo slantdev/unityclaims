@@ -1,3 +1,43 @@
+/* Global */
+@import "./parts/header.css";
+@import "./parts/large-header.css";
+@import "./parts/secondary-header.css";
+@import "./parts/logo.css";
+@import "./parts/menu.css";
+@import "./parts/mega-menu.css";
+@import "./parts/footer.css";
+
+@import "./parts/dropdown-navigation.css";
+@import "./parts/job-application.css";
+@import "./parts/modal.css";
+
+@import "./content-blocks/content-block.css";
+@import "./content-blocks/full-width-text.css";
+@import "./content-blocks/two-column-text.css";
+@import "./content-blocks/display-form.css";
+@import "./content-blocks/image-button-cards.css";
+@import "./content-blocks/image-button-cards-carousel.css";
+@import "./content-blocks/image-and-text-cards.css";
+@import "./content-blocks/infocards.css";
+@import "./content-blocks/call-to-action.css";
+@import "./content-blocks/cta-02.css";
+@import "./content-blocks/cta-03.css";
+@import "./content-blocks/cta-04.css";
+@import "./content-blocks/contact-form-cta.css";
+@import "./content-blocks/video-section.css";
+@import "./content-blocks/quicklinks.css";
+@import "./content-blocks/team-list.css";
+@import "./content-blocks/values.css";
+@import "./content-blocks/job-search.css";
+@import "./content-blocks/subheader.css";
+@import "./content-blocks/text-cards.css";
+@import "./content-blocks/cards.css";
+
+@import "./templates/single-post.css";
+
+@import "./components/headings.css";
+
+/* Wordpress */
 .entry-content,
 .block-editor-block-list__layout {
   color: var(--color-zinc-950);
